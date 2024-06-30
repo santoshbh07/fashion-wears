@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Fashion/shop</title>
+    <style>
+        /* Fullscreen Image Overlay */
+        .fullscreen-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .fullscreen-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .fullscreen-overlay .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-banner">
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo"><a href="index.html">Fashion</a></div>
+                <div class="nav-lists">
+                    <ul class="nav-links">
+                        <li class="nav-list"><a href="index.html" class="nav-link">HOME</a></li>
+                        <li class="nav-list"><a href="about.html" class="nav-link">ABOUT</a></li>
+                        <li class="nav-list"><a href="blog.html" class="nav-link">BLOG</a></li>
+                        <li class="nav-list"><a href="shop.html" class="nav-link active">SHOP</a></li>
+                        <li class="nav-list"><a href="contact.html" class="nav-link">CONTACT</a></li>
+                        <i class='bx bxs-cart cart-icon'></i>
+                    </ul>
+
+                    <i class='bx bx-x cross-icon'></i>                    
+                </div>
+                <div class="menu">MENU</div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="breadcrumb">
+        <p class="bdc-t-s"><span class="breadcrumb-title"><a href="index.html">HOME</a> ></span> <span class="breadcrumb-subtitle">SHOP</span></p>
+    </div>
+
+    <div class="shop-container">
+        <div class="shoes-container">
+            <div class="mens-section">
+                <h4 class="shoe-section">Mens Footwears</h4>
+                <div class="shoe-boxes">
+                    <div class="shoe-box">
+                        <img src="assets/img/img1.jpg" alt="" class="myImg">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                    <div class="shoe-box">
+                        <img src="assets/img/img2.jpg" alt="">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                    <div class="shoe-box">
+                        <img src="assets/img/img3.jpg" alt="">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                    <div class="shoe-box">
+                        <img src="assets/img/img4.jpg" alt="">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                    <div class="shoe-box">
+                        <img src="assets/img/img5.jpg" alt="">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                    <div class="shoe-box">
+                        <img src="assets/img/img6.jpg" alt="">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="womens-section">
+                <h4 class="shoe-section">Womens Section</h4>
+                <div class="shoe-boxes">
+                    <div class="shoe-box">
+                        <img src="assets/img/img1.jpg" alt="">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                    <div class="shoe-box">
+                        <img src="assets/img/img2.jpg" alt="">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                    <div class="shoe-box">
+                        <img src="assets/img/img3.jpg" alt="">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                    <div class="shoe-box">
+                        <img src="assets/img/img4.jpg" alt="">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                    <div class="shoe-box">
+                        <img src="assets/img/img5.jpg" alt="">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                    <div class="shoe-box">
+                        <img src="assets/img/img6.jpg" alt="">
+                        <div>
+                            <span class="price">$120.00</span>
+                            <span class="add">Add to cart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-container">
+            <h4>Shopping Cart</h4>
+            <ul class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <div class="cart-total">
+                Total: $<span id="total-price">0.00</span>
+            </div>
+            <button class="order">Place Order</button>
+            <i class='bx bx-x cart-cross-icon'></i>
+        </div>
+    </div>
+
+    <!-- scroll up -->
+    <button class="page-up"><i class='bx bx-chevrons-up up-icon'></i></button>
+
+    <!-- Fullscreen Image Overlay -->
+    <div class="fullscreen-overlay" id="fullscreenOverlay">
+        <span class="close" id="closeBtn">&times;</span>
+        <img id="fullscreenImage" src="" alt="Fullscreen Image">
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
